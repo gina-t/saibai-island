@@ -1,14 +1,17 @@
 'use client'
-
+import logo from '../assets/logo.svg'
+import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { ChevronRightIcon } from '@heroicons/react/20/solid'
 
 const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'Saibai Island', href: '/saibai' },
+  { name: 'Design Solution', href: '/design' },
+  { name: 'Implementation', href: '/implementation' },
+  { name: 'Cost Analysis', href: '/costs' },
+  { name: 'Stakeholders', href: '/stakeholders' },
 ]
 
 export default function Header() {
@@ -17,16 +20,18 @@ export default function Header() {
   return (
     <header className="bg-white">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+        {/* Logo link */}
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
+          <Link to="/" className="-m-1.5 p-1.5">
+            <span className="sr-only">Sabai Island Project</span>
             <img
-              alt=""
-              src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-              className="h-8 w-auto"
+              alt="dandelion"
+              src={logo}
+              className="h-10 w-auto"
             />
-          </a>
+          </Link>
         </div>
+         {/* Hamburger menu button for mobile*/}
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -37,31 +42,35 @@ export default function Header() {
             <Bars3Icon aria-hidden="true" className="size-6" />
           </button>
         </div>
+         {/* Desktop navigation links */}
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
-            <a key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-900">
+            <Link key={item.name} to={item.href} className="text-sm/6 font-semibold text-gray-900">
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
-            Log in <span aria-hidden="true">&rarr;</span>
-          </a>
+          <Link to="/login" className="flex items-center text-sm/6 font-semibold text-gray-900">
+            Log in <ChevronRightIcon aria-hidden="true" className="size-5 text-gray-400" />
+          </Link>
         </div>
       </nav>
+       {/* Mobile navigation menu. Entire component is hidden on large screens. */}
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
         <div className="fixed inset-0 z-50" />
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+             {/* Logo link in mobile menu */}
+            <Link to="/" className="-m-1.5 p-1.5">
+              <span className="sr-only">Saibai Island</span>
               <img
-                alt=""
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                alt="dandelion"
+                src={logo}
                 className="h-8 w-auto"
               />
-            </a>
+            </Link>
+             {/* Close button in mobile menu */}
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
@@ -71,6 +80,7 @@ export default function Header() {
               <XMarkIcon aria-hidden="true" className="size-6" />
             </button>
           </div>
+          {/* Mobile navigation links */}
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">

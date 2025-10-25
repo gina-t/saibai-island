@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css'
 import App from './App.tsx';
 import HomePage from './pages/HomePage.tsx';
-import AboutPage from './pages/AboutPage.tsx';
+import SaibaiPage from './pages/SaibaiPage.tsx'
 import StakeHoldersPage from './pages/StakeHoldersPage.tsx';
 import DesignPage from './pages/DesignPage.tsx';
 import ImplementationPage from './pages/ImplementationPage.tsx';
@@ -21,24 +21,24 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: 'about',
-        element: <AboutPage />,
+        path: '/saibai',
+        element: <SaibaiPage />,
       },
       {
-        path: 'stakeholders',
+        path: '/stakeholders',
         element: <StakeHoldersPage />,
       },
       {
-        path: 'design',
+        path: '/design',
         element: <DesignPage />, 
       },
       {
-        path: 'implementation',
+        path: '/implementation',
         element: <ImplementationPage />,
       },
       
       { 
-        path: 'costs',
+        path: '/costs',
         element: <CostsPage />,
       },
     ],
