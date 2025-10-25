@@ -58,7 +58,7 @@ export default function Footer() {
         </div>
         
         <p className="mt-8 text-center text-sm/6 text-gray-600 md:order-1 md:mt-0">
-          &copy; 2025 Interstitial, Inc. All rights reserved.
+          &copy; 2025 Saibai Island Project | ginadrcoder.net
         </p>
       </div>
       
