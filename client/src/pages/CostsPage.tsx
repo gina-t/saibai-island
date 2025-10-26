@@ -8,16 +8,16 @@ export default function CostsPage() {
       <div className="absolute inset-0 bg-linear-115 from-[#FCFFC1]/80 from-28% via-[#41A67E]/80 via-65% to-[#1055C9]/80 sm:bg-linear-145 z-10 mix-blend-multiply pointer-events-none">
       </div>
        {/* grid overlay */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
+      {/* <div className="absolute inset-0 -z-10 overflow-hidden"> */}
         <svg
           aria-hidden="true"
-          className="absolute top-0 left-[max(50%,25rem)] h-256 w-512 -translate-x-1/2 mask-[radial-gradient(64rem_64rem_at_top,white,transparent)] stroke-gray-200"
+          className="absolute inset-0 -z-10 size-full mask-[radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-gray-200"
         >
           <defs>
             <pattern
               x="50%"
               y={-1}
-              id="111317"
+              id="232931"
               width={200}
               height={200}
               patternUnits="userSpaceOnUse"
@@ -25,15 +25,9 @@ export default function CostsPage() {
               <path d="M100 200V.5M.5 .5H200" fill="none" />
             </pattern>
           </defs>
-          <svg x="50%" y={-1} className="overflow-visible fill-gray-50">
-            <path
-              d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
-              strokeWidth={0}
-            />
-          </svg>
-          <rect fill="url(11317)" width="100%" height="100%" strokeWidth={0} />
+          <rect fill="url(#232931)" width="100%" height="100%" strokeWidth={0} />
         </svg>
-      </div>
+      {/* </div> */}
        {/* main content */}
       <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
@@ -43,8 +37,7 @@ export default function CostsPage() {
               <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
                 Manufacturing Cost
               </h1>
-              <p className="mt-6 text-xl/8 text-gray-700">The design could not be injected moulded so we consulted a Sydney company with expertise in thermofusion. Warringah Plastics in Brookvale are experienced in sheet plastic vacuum/ pressure thermoforming & fabrication, epoxy tooling, CNC for 3D routing. Recycled plastic pellets, inherently one piece to provide strength and rigidity.
-                
+              <p className="mt-6 text-xl/8 text-gray-700">The design could not be injected moulded so we consulted a Sydney company with expertise in thermofusion. Warringah Plastics in Brookvale are experienced in sheet plastic vacuum/ pressure thermoforming & fabrication, epoxy tooling, and CNC for 3D routing. Material is recycled plastic pellets, inherently one piece to provide strength and rigidity. 
               </p>
             </div>
           </div>
@@ -61,47 +54,46 @@ export default function CostsPage() {
           <div className="lg:pr-4">
             <div className="max-w-xl text-base/7 text-gray-600 lg:max-w-lg">
               <p>
-                Initial outlay is estimated at $48,000 for 600 parts + GST + delivery
-                Factor interstate road freight to QLD and sea freight to Saibai
-
+                Cost is estimated at $99,495 for 600 units excluding GST. Factor costs for testing, interstate road freight to Queensland and sea freight to Saibai.
               </p>
               <ul role="list" className="mt-8 space-y-8 text-gray-600">
                 <li className="flex gap-x-3">
                   <ArrowPathRoundedSquareIcon aria-hidden="true" className="mt-1 size-5 flex-none text-indigo-600" />
                   <span>
-                    <strong className="font-semibold text-gray-900">Samples.</strong> 
+                    <strong className="font-semibold text-gray-900">Samples</strong> 5 samples to be constructed at unit price of $699 for testing.
 
                   </span>
                 </li>
                 <li className="flex gap-x-3">
                   <ArrowPathRoundedSquareIcon aria-hidden="true" className="mt-1 size-5 flex-none text-indigo-600" />
                   <span>
-                    <strong className="font-semibold text-gray-900">Timber Pattern</strong> Coastal ersosion, disappearing beaches, hypersalination of mangroves and wetlands, loss of biodiversity, loss of traditional crops and community gardens.
+                    <strong className="font-semibold text-gray-900">Timber Pattern</strong> Required to cast tooling.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
                   <ArrowPathRoundedSquareIcon aria-hidden="true" className="mt-1 size-5 flex-none text-indigo-600" />
                   <span>
-                    <strong className="font-semibold text-gray-900">Production</strong> 
+                    <strong className="font-semibold text-gray-900">Epoxy Tooling</strong> Production tooling cast from the initial timber pattern and required for production quantities.
+                  </span>
+                </li>
+                <li className="flex gap-x-3">
+                  <ArrowPathRoundedSquareIcon aria-hidden="true" className="mt-1 size-5 flex-none text-indigo-600" />
+                  
+                  <span>
+                    <strong className="font-semibold text-gray-900">Production</strong> Parts vacuum formed from 5mm Black HMWPE (starting guage).
 
                   </span>
                 </li>
                 <li className="flex gap-x-3">
                   <ArrowPathRoundedSquareIcon aria-hidden="true" className="mt-1 size-5 flex-none text-indigo-600" />
                   <span>
-                    <strong className="font-semibold text-gray-900">Epoxy Tooling</strong> 
+                    <strong className="font-semibold text-gray-900">Testing</strong> Manly Hydraulics Laboratory provides specialist and impartial advice relating to coastal and water engineering and water flow assurance, utilising physical and numerical modelling, NATA accredited facilities and extensive data collection programs in water, sewer, stormwater, irrigation, coastal, riverine and environmental systems. MHL is a business unit within the Water Division of the Department of Climate Change, Energy, the Environment, and Water.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
                   <ArrowPathRoundedSquareIcon aria-hidden="true" className="mt-1 size-5 flex-none text-indigo-600" />
                   <span>
-                    <strong className="font-semibold text-gray-900">Testing</strong> 
-                  </span>
-                </li>
-                <li className="flex gap-x-3">
-                  <ArrowPathRoundedSquareIcon aria-hidden="true" className="mt-1 size-5 flex-none text-indigo-600" />
-                  <span>
-                    <strong className="font-semibold text-gray-900">Transportation to Saibai</strong> 
+                    <strong className="font-semibold text-gray-900">Transportation to Saibai</strong> Sydney to Cairns road freight estimated cost of $2,500. Cairns to Saibai by barge estimated cost of $3,500 to $5,500.
                   </span>
                 </li>
               </ul>

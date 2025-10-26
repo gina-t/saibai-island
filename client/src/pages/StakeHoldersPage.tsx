@@ -6,16 +6,16 @@ export default function StakeHoldersPage() {
       {/* Semi-transparent gradient overlay */}
       <div className="absolute inset-0 bg-linear-115 from-[#FCFFC1]/80 from-28% via-[#41A67E]/80 via-65% to-[#1055C9]/80 sm:bg-linear-145 z-10 mix-blend-multiply pointer-events-none"></div>
       {/* grid overlay */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
+      {/* <div className="absolute inset-0 -z-10 overflow-hidden"> */}
         <svg
           aria-hidden="true"
-          className="absolute top-0 left-[max(50%,25rem)] h-256 w-512 -translate-x-1/2 mask-[radial-gradient(64rem_64rem_at_top,white,transparent)] stroke-gray-200"
+          className="absolute inset-0 -z-10 size-full mask-[radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-gray-200"
         >
           <defs>
             <pattern
               x="50%"
               y={-1}
-              id="111317"
+              id="313741"
               width={200}
               height={200}
               patternUnits="userSpaceOnUse"
@@ -23,15 +23,9 @@ export default function StakeHoldersPage() {
               <path d="M100 200V.5M.5 .5H200" fill="none" />
             </pattern>
           </defs>
-          <svg x="50%" y={-1} className="overflow-visible fill-gray-50">
-            <path
-              d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
-              strokeWidth={0}
-            />
-          </svg>
-          <rect fill="url(11317)" width="100%" height="100%" strokeWidth={0} />
+          <rect fill="url(#313741)" width="100%" height="100%" strokeWidth={0} />
         </svg>
-      </div>
+      {/* </div> */}
       {/* main content */}
       <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
@@ -39,34 +33,45 @@ export default function StakeHoldersPage() {
             <div className="lg:max-w-lg">
               <p className="text-base/7 font-semibold text-indigo-600">Stakeholders</p>
               <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
-                Climate Change Officers and Rangers
+                Climate Resilience Officers and Rangers
               </h1>
               <p className="mt-6 text-xl/8 text-gray-700">
-                Climate change officers are currently being trained by the Torres Strait & Northern Peninsula Area Climate Resilience Centre. We suggest that these officers will be the primary stakeholders for implementing our design solution.
+                Climate resilience officers are currently being recruited and trained by the Torres Strait & Northern Peninsula Area Climate Resilience Centre. These officers will lead practical climate adaptation projects. We suggest that these officers will be the primary stakeholders for implementing our design solution, in addition to local rangers.
               </p>
             </div>
           </div>
         </div>
         {/* image */}
-        <div className="-mt-12 -ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+        <div className="mt-0 ml-0 p-6 sm:-mt-12 sm:-ml-12 sm:p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
           <img
             alt="resilience"
             src={Resilience}
-            className="w-3xl max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-228"
+            className="w-full sm:w-3xl md:w-204 max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 object-cover object-right"
           />
         </div>
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="max-w-xl text-base/7 text-gray-600 lg:max-w-lg">
-              <p>
-                They bring: • Technical training in climate adaptation strategies • Understanding of local environmental conditions and weather patterns • Coordination skills for emergency response and community engagement • Knowledge of available resources and regional support networks • Capacity to monitor weather forecasts and trigger deployment protocols
-              </p>
-              <p className="mt-8">
-                Rangers play a critical support role in flood mitigation efforts through their deep local knowledge, physical capability, and community trust. They provide: • Intimate knowledge of the island's geography, vulnerable areas, and access routes • Physical workforce for deploying and removing flood barriers • Strong community relationships ensuring cultural safety and cooperation • Experience with practical logistics and equipment management in remote settings • On-ground presence for rapid response when flooding is imminent
-              </p>
-              <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">Why these stakeholders matter</h2>
+            <h2 className="mt-4 text-2xl font-bold tracking-tight text-gray-900">
+              Climate Resilience Officers
+              </h2>
+              <ul className="mt-2 space-y-1 pl-2 text-sm text-gray-900 list-disc marker:text-indigo-600 marker:text-xs">
+                <li className='ml-2'>Technical training in climate adaptation strategies</li>
+                <li className='ml-2'>Understanding of local environmental conditions and weather patterns</li>
+                <li className='ml-2'>Coordination skills for emergency response and community engagement</li>
+                <li className='ml-2'>Knowledge of available resources and regional support networks</li>
+                <li className='ml-2'>Capacity to monitor weather forecasts and trigger deployment protocols</li>
+              </ul>
+              <h2 className="mt-4 text-2xl font-bold tracking-tight text-gray-900">Mura Buway Rangers</h2>
+              <ul className="mt-2 space-y-1 pl-2 text-sm text-gray-900 list-disc marker:text-indigo-600 marker:text-xs">
+                <li className='ml-2'>Intimate knowledge of the island’s geography, vulnerable areas, and access routes for targeted deployment.</li>
+                <li className='ml-2'>Physical workforce for rapid installation, adjustment and removal of flood barriers during high-risk events</li>
+                <li className='ml-2'>Strong community relationships that ensure culturally safe engagement and cooperation.</li>
+              </ul>
+              
+              <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">Why These Stakeholders Matter</h2>
               <p className="mt-6">
-                Unlike traditional infrastructure projects where stakeholders might be government agencies or contractors, temporary flood mitigation requires local implementation partners who can respond quickly to weather events. Climate officers and rangers are ideal stakeholders because they:
+                Unlike traditional infrastructure projects where stakeholders might be government agencies or contractors, temporary flood mitigation requires local implementation partners who can respond quickly to weather events. Climate resilience officers and rangers are ideal stakeholders:
               </p>
               <div className="mt-10 grid gap-6 sm:grid-cols-2">
                 <div>
@@ -82,7 +87,7 @@ export default function StakeHoldersPage() {
                     Cultural Sensitivity
                   </h4>
                   <p className="mt-2 text-sm/6">
-                    Understand cultural protocols, sacred sites, and community concerns that external teams might overlook
+                    Understand cultural protocols, sacred sites, and community concerns
                   </p>
                 </div>
                 <div>
