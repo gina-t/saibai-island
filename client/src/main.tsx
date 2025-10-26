@@ -9,6 +9,7 @@ import StakeHoldersPage from './pages/StakeHoldersPage.tsx';
 import DesignPage from './pages/DesignPage.tsx';
 import ImplementationPage from './pages/ImplementationPage.tsx';
 import CostsPage from './pages/CostsPage.tsx';
+import GovernancePage from './pages/GovernancePage.tsx';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       { 
         path: '/costs',
         element: <CostsPage />,
+      },
+      { 
+        path: '/funding',
+        element: <GovernancePage />,
       },
     ],
   },

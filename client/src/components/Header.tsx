@@ -11,6 +11,7 @@ const navigation = [
   { name: 'Design Solution', href: '/design' },
   { name: 'Implementation', href: '/implementation' },
   { name: 'Cost Analysis', href: '/costs' },
+  { name: 'Governance and Funding', href: '/funding' },
   { name: 'Stakeholders', href: '/stakeholders' },
 ]
 
