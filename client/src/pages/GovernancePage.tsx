@@ -76,15 +76,21 @@ export default function GovernancePage() {
               </blockquote>
               <figcaption className="mt-8 flex gap-x-4">
                 <div className="text-sm/6">
-                  <div className="font-semibold text-gray-900">TSNPACRC</div>
-                  <a
-                    href="https://www.dcceew.gov.au/climate-change/policy/torres-strait-northern-peninsula-area-climate-resilience-centre"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-indigo-600 underline"
-                  >
-                    https://www.dcceew.gov.au/climate-change/policy/torres-strait-northern-peninsula-area-climate-resilience-centre
-                  </a>
+                  <div className="font-semibold text-gray-900">
+                    Torres Strait and Northern Peninsula Area Climate Resilience Centre
+                  </div>
+                  <div className="text-gray-600">
+                    From <cite>Torres Strait and Northern Peninsula Area Climate Resilience Centre</cite>, by Department of Climate Change, Energy, the Environment and Water, Australian Government (
+                    <a
+                      href="https://www.dcceew.gov.au/climate-change/policy/torres-strait-northern-peninsula-area-climate-resilience-centre"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-indigo-600 hover:text-indigo-500 underline"
+                    >
+                      https://www.dcceew.gov.au/climate-change/policy/torres-strait-northern-peninsula-area-climate-resilience-centre
+                    </a>
+                    ).
+                  </div>
                 </div>
               </figcaption>
             </figure>
