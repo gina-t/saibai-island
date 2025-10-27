@@ -94,17 +94,35 @@ export default function HomePage() {
         {/* hero image */}
         <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:mt-0 lg:mr-0 lg:ml-10 lg:max-w-none lg:flex-none xl:ml-32">
           <div className="max-w-full flex-none sm:max-w-5xl lg:max-w-none">
-            <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-gray-900/10 ring-inset lg:-m-4 lg:rounded-2xl lg:p-4">
-              <img
-                alt="aerial view Saibai Island"
-                src={Hero}
-                width={2432}
-                height={1442}
-                className="w-204 rounded-md bg-gray-50 shadow-xl ring-1 ring-gray-900/10 opacity-80"
-              />
-            </div>
+            <figure>
+              <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-gray-900/10 ring-inset lg:-m-4 lg:rounded-2xl lg:p-4">
+                <img
+                  alt="Aerial view of western Torres Strait islands including Boigu, Dauan and Saibai"
+                  src={Hero}
+                  width={2432}
+                  height={1442}
+                  className="w-204 rounded-md bg-gray-50 shadow-xl ring-1 ring-gray-900/10 opacity-80"
+                />
+              </div>
+              <figcaption className="mt-8 w-204 text-sm text-gray-500 italic">
+                <span className="font-semibold not-italic text-gray-700 mr-2">
+                  Figure 1.
+                </span> 
+                Aerial view of western islands cluster including Boigu, Dauan and Saibai. Adapted from <cite>Biosecurity Plan 2018-2023</cite>, by Torres Strait Island Regional Council, 2018 (https://tsirc.qld.gov.au/wp-content/uploads/2025/01/Biosecurity-Plan-2018-2023.pdf). (
+                <a 
+                  href="https://tsirc.qld.gov.au/wp-content/uploads/2025/01/Biosecurity-Plan-2018-2023.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-indigo-600 hover:text-indigo-500 underline not-italic"
+                >
+                  https://tsirc.qld.gov.au/wp-content/uploads/2025/01/Biosecurity-Plan-2018-2023.pdf
+                </a>
+                ).
+              </figcaption>
+            </figure>
           </div>
-        </div>   
+        </div>
+
       </div> 
     </div>
   );
