@@ -43,12 +43,30 @@ export default function StakeHoldersPage() {
         </div>
         {/* image */}
         <div className="mt-0 ml-0 p-6 sm:-mt-12 sm:-ml-12 sm:p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-          <img
-            alt="resilience"
-            src={Resilience}
-            className="w-full sm:w-3xl md:w-204 max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 object-cover object-right"
-          />
+          <figure>
+            <img
+              alt="Torres Strait Regional Resilience Framework Conceptual Diagram"
+              src={Resilience}
+              className="w-full sm:w-3xl md:w-204 max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 object-cover object-right"
+            />
+            <figcaption className="mt-8 text-sm text-gray-500 italic">
+              <span className="font-semibold not-italic text-gray-700 mr-2">
+                Figure 6.
+              </span>
+              Torres Strait Regional Resilience Framework Conceptual Diagram. From <cite>Torres Strait Regional Adaptation and Resilience Plan 2025-2030</cite>, by Torres Strait Regional Authority, 2025 (
+              <a 
+                href="https://www.tsra.gov.au/wp-content/uploads/2025/03/TSRA-Regional-Adaptation-Plan-WEB-120325.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-indigo-600 hover:text-indigo-500 underline not-italic"
+              >
+                https://www.tsra.gov.au/wp-content/uploads/2025/03/TSRA-Regional-Adaptation-Plan-WEB-120325.pdf
+              </a>
+              ).
+            </figcaption>
+          </figure>  
         </div>
+         {/* main content */}
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="max-w-xl text-base/7 text-gray-600 lg:max-w-lg">

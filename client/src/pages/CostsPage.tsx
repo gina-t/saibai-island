@@ -44,12 +44,21 @@ export default function CostsPage() {
         </div>
           {/* image */}
         <div className="-mt-12 -ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-          <img
-            alt="spreadsheet"
+          <figure>
+            <img
+            alt="Quote for flood barrier manufacturing from Warringah Plastics"
             src={Cost}
             className="w-3xl max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-228"
-          />
+            />
+            <figcaption className="mt-8 text-sm text-gray-500 italic">
+              <span className="font-semibold not-italic text-gray-700 mr-2">
+                Figure 5.
+              </span>
+              Manufacturing cost quote for L-shaped flood barrier modules. From Warringah Plastics, Brookvale, NSW. Personal communication via email, October 2025.
+            </figcaption>
+          </figure>
         </div>
+        {/* main content */}
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="max-w-xl text-base/7 text-gray-600 lg:max-w-lg">
